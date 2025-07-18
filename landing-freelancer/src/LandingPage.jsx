@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CountUp from 'react-countup';
+import picture1 from '/assets/picture1.jpeg';
+import picture2 from '/assets/picture2.jpeg';
+import aboutme from '/assets/aboutme.jpg';
+
 
 const Button = ({ children, className = "" }) => (
   <button className={`px-6 py-2 rounded-xl font-semibold transition ${className}`}>
@@ -97,7 +101,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <img src="/assets/picture1.jpeg" alt="Profile" className="rounded-3xl shadow-xl" />
+          <img src={picture1} alt="Profile" className="rounded-3xl shadow-xl" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -119,7 +123,7 @@ export default function LandingPage() {
             <p className="text-lg">Sunt Teodora, freelancer în marketing digital, cu o abordare personalizată și creativă. Îmbin strategia cu storytellingul și conținutul vizual, pentru ca brandurile să strălucească în online.</p>
           </div>
           <div className="flex justify-center">
-            <img src="/assets/aboutme.jpg" alt="Teodora" className="rounded-3xl w-full max-w-md shadow-xl" />
+            <img src={aboutme} alt="AboutMe" className="rounded-3xl shadow-xl" />
           </div>
         </div>
       </section>
@@ -184,7 +188,7 @@ export default function LandingPage() {
             <Button className="text-lg bg-[#a36d75] text-white hover:bg-[#e8b8c6]">Trimite un mesaj</Button>
           </div>
           <div className="flex justify-center">
-            <img src="/assets/picture2.jpeg" alt="Contact" className="rounded-3xl shadow-xl w-full max-w-md" />
+            <img src={picture2} alt="Contact" className="rounded-3xl shadow-xl" />
           </div>
         </div>
       </section>
